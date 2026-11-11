@@ -1,8 +1,23 @@
+# Just a Dungeon
+
+**Play:** https://rafaelkoo.github.io/Just-a-Dungeon/ · English and Cantonese · best on a phone
+
+A mobile-first idle dungeon game in Three.js and TypeScript. Leave the screen alone and your hero plays on autopilot; drag (or use WASD / arrow keys) to take control, and it goes back to autopilot two seconds after you let go. Four base classes with 16 awakened classes, skill boards, gear with upgrades and rerolls, world bosses, and an optional online account (Supabase, tables locked by row-level security) for cloud saves, leaderboards and 2-player co-op.
+
+<p>
+<img src="docs/img/gameplay.png" width="260" alt="Archer fighting skeletons in a dungeon on autopilot, with HP, kills, timer and coins at the top">
+<img src="docs/img/menu.png" width="260" alt="Main menu with the four classes and the Start button">
+</p>
+
+**Built with:** TypeScript, Three.js, Vite, a fixed-step simulation kept separate from rendering (`src/sim/` vs `src/render/`), a PWA service worker, and a GitHub Actions workflow that deploys to GitHub Pages on every push to `main`. Built with AI assistance (Claude).
+
+---
+
 # 地城 Beta
 
 手機為主嘅 idle 地城遊戲（Three.js + TypeScript）。計劃見 `docs/plan.md`。
 
-**網上玩：** https://<your-username>.github.io/<repo-name>/ （GitHub Pages，每次 push 去 `main` 自動更新）
+**網上玩：** https://rafaelkoo.github.io/Just-a-Dungeon/ （GitHub Pages，每次 push 去 `main` 自動更新）
 
 - 唔掂螢幕 = 🤖 自動駕駛，角色自己行、自己打
 - 掂住螢幕拖動（電腦用滑鼠拖，或者 WASD / 方向鍵）= 🎮 自己操控，放手 2 秒後變返自動

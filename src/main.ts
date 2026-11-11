@@ -15,6 +15,9 @@ import { esc, fmt, h, mmss } from './ui/dom';
 import { showHome as renderHome, type HomeCtx, type Tab } from './ui/home';
 import { showRunTip, welcomeModal } from './ui/onboarding';
 import { getLang, langChosen, setLang, tr } from './i18n';
+
+document.documentElement.lang = getLang() === 'en' ? 'en' : 'zh-HK';
+document.title = tr('地城 Beta 5', 'Dungeon Beta 5');
 import { ico } from './ui/icons';
 import { coopBotOn } from './coopbot';
 import { afterRun, coopAvailable, leaveTeam, session, showCoopLobby, snapRate, team, teamMaxTier, teamStart, type Setup } from './net/coop';

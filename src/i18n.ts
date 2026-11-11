@@ -1,10 +1,11 @@
-// Language: 粵語 (default) or English. Picked in 設定 / Settings; switching reloads the page,
+// Language: English (default on a new device) or 粵語. Picked in 設定 / Settings; switching reloads the page,
 // so every string (including data tables built at load time) is simply evaluated in the current language.
 export type Lang = 'zh' | 'en';
 const KEY = 'website-game-lang';
 
 let lang: Lang = (() => {
-  try { return localStorage.getItem(KEY) === 'en' ? 'en' : 'zh'; } catch { return 'zh'; }
+  // a device that has never picked starts in English; 廣東話 only once chosen
+  try { return localStorage.getItem(KEY) === 'zh' ? 'zh' : 'en'; } catch { return 'en'; }
 })();
 
 export const getLang = (): Lang => lang;
